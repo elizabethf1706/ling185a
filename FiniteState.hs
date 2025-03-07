@@ -68,4 +68,3 @@ generates :: (Eq st, Eq sy) => Automaton st sy -> [sy] -> Bool
 generates m w = let (states, syms, i, f, delta) = m in
                 or (map (\q0 -> elem q0 i && backward m w q0) states)
 
- 
